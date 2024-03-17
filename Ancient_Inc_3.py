@@ -62,13 +62,14 @@ class Room:
 
 fake = Faker()
 
-categories = ['Science Fiction', 'Fantasy', 'Mystery', 'Thriller', 'Non-Fiction', 'Historical Fiction', 'Romance']
+categories = ['Science Fiction', 'Fantasy', 'Mystery', 'Thriller',
+              'Non-Fiction', 'Historical Fiction', 'Romance']
 
 
 def create_fake_books(number_of_books):
     books = set()
     for _ in range(number_of_books):
-        title = fake.catch_phrase() 
+        title = fake.catch_phrase()
         author = fake.name()
         category = random.choice(categories)
         books.add(Book(title, author, category))
